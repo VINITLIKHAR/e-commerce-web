@@ -3,6 +3,9 @@ import MainLayout from "../components/MainLayout";
 import ProtectedRoute from "../components/ProtectedRoute";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import Products from "../pages/Products";
+import ProductDetail from "../pages/ProductDetail";
+import Cart from "../pages/Cart";
 
 const AppRoutes = () => (
   <Routes>
@@ -14,6 +17,9 @@ const AppRoutes = () => (
 
       <Route element={<ProtectedRoute />}>
         <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
       </Route>
 
       <Route
